@@ -5,7 +5,9 @@ class Grades
 public:
   Grades();
 
-private:
   
+private:
+  double min, max, median, Q1, Q2,
+    mean, mode, stdev;
   
 };

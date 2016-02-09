@@ -1,0 +1,9 @@
+Kevin Perez
+2/7/16
+Project: Basic Stat Calculations of Student Grades
+
+~~~~~ 2/7/16 ~~~~~
+Methods of implementation:
+- Storing midterm grades in one array and final exam grades in another.
+- Storing each student id in a class (Student) and Grades in class Grades
+- Storing 
