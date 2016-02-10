@@ -2,9 +2,12 @@
 /*
   Kevin Perez
   2/8/16
+  GradesDriver.cpp
   
   This program calculates: max, min, median, Q1, Q2, mean, mode, and 
   standard deviation of the provided values.
+  
+  runs perfectly on cygwin64 using g++ -std=c++11 -Wall -Wextra GradesDriver.cpp
 
 */
 #include <iostream>
@@ -74,7 +77,7 @@ int main(int argc, char * argv[])
     ++itr;
   } // while
   } //  if
-  
+
   infile.close();
   //sorting is necessary for everything but max() and min()
   sort(midterm);
@@ -217,7 +220,7 @@ double mean(const double* test)
  */
 void mode(const double* test)
 {
-  int amountOfModes = 20;
+  unsigned int amountOfModes = 20;
   double * currentMode = new double[amountOfModes]; // 1 or more mode allowed
   double previous = test[0];
  
@@ -242,15 +245,15 @@ void mode(const double* test)
 	currentMode[j] = test[i-1];
 	++j;
       } // else-if
-      occurances = 0; // counting the new grade
+      occurances = 0; 
     } // outer if
     
-    ++occurances;
+    ++occurances; // couning occurances of current grade test[i]
     previous = test[i];
   } // for
    
   // printing the mode for the test grades
-  for(int i = 0; i < amountOfModes && currentMode[i]; ++i)
+  for(int i = 0; currentMode[i]; ++i)
     std::cout << currentMode[i] << ' ';
 }
 

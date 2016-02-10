@@ -6,9 +6,13 @@ The program consists of only one file GradesDriver.cpp. You must have g++
 installed on your computer (I'm assuming any version of it will work, but I
 used the newest one, being g++ 4.9.3).
 
-1. Compile g++ --std=C++11 --Wall --WEXTRA
+1. Compile g++ -std=c++11 -Wall -Wextra GradesDriver.cpp
+2. Run './a.out scores.txt' or './a.exe scores.txt' depending on machine.
 
-
+I compiled this on windows Cygwin and it works perfect (./a.exe). But
+there is a problem with ./a.out when it comes to outputing the mode.
+The first few mode numbers are output but then there are erroneous
+numbers (6.91848e-310).
 
 
 ----------------------------
